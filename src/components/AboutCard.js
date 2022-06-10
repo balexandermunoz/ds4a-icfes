@@ -8,7 +8,7 @@ const HomeCard = ({name, image, description}) => {
                 <img className={"about--card--leftcol--image"} src={image} alt=""/>
             </div>
             <div className={"about--card--rightcol"}>
-                {description}
+                <p className={"about--card--rightcol--description"}>{description}</p>
             </div>
         </div>
     );
