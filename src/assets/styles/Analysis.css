@@ -1,0 +1,38 @@
+.analysis--plot {
+  border: 0;
+}
+.analysis--buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: row;
+}
+.analysis--buttons--select {
+  border-radius: 20px;
+  width: 200px;
+  max-width: 500px;
+  transition: width 0.5s ease-in-out;
+}
+.analysis--buttons--select:focus {
+  width: 300px;
+}
+.analysis--link {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+.analysis--link--button {
+  width: 120px;
+  border: 2px solid #282c34;
+  color: #282c34;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.analysis--link--button:hover {
+  background-color: #dee8ff;
+}
+
+/*# sourceMappingURL=Analysis.css.map */

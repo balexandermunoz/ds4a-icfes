@@ -1,0 +1,30 @@
+.about--card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 40px;
+
+  &--leftcol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+
+    &--image {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+    }
+  }
+
+  &--rightcol {
+  }
+}
+
+@media (max-width: 750px) {
+  .about--card {
+    flex-wrap: wrap;
+  }
+}
