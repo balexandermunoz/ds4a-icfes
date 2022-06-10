@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 .about--card {
   display: flex;
   flex-direction: row;
@@ -12,11 +13,21 @@
   align-items: center;
   min-width: 300px;
 }
+.about--card--leftcol--name {
+  border-bottom: 1px solid #ccc;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
 .about--card--leftcol--image {
   width: 200px;
   height: 200px;
   border-radius: 100px;
 }
+.about--card--rightcol--description {
+  text-align: left;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
 @media (max-width: 750px) {
   .about--card {
     flex-wrap: wrap;
