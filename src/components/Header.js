@@ -1,5 +1,5 @@
 import '../assets/styles/Header.css';
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {ReactComponent as HomeIcon} from "../assets/images/home.svg";
 import {ReactComponent as ScatterIcon} from "../assets/images/scatter-plot.svg";
 
