@@ -1,0 +1,22 @@
+.plots--pies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.plots--pies--pie {
+  width: 50%;
+  height: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .plots--pies {
+    display: flex;
+    flex-direction: column;
+  }
+  .plots--pies--pie {
+    width: 100%;
+    height: 100%;
+  }
+}/*# sourceMappingURL=Plots.css.map */
