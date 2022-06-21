@@ -1,5 +1,3 @@
-import * as d3 from 'd3';
-
 const Models = () => {
     return (
         <div className="analysis">

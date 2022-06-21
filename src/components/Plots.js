@@ -1,3 +1,4 @@
+// Json data:
 import colTestMeanData from '../assets/json/ColPeriodTestMeanALL.json';
 import colEstratData from '../assets/json/ColEstrPerc_Plot4.json';
 import colTieneCompData from '../assets/json/ColTieneComp.json';
@@ -6,15 +7,21 @@ import colLecturaDiariaData from '../assets/json/ColLecturaDiaria.json';
 import colInternetDiarioData from '../assets/json/ColInternetDiario.json';
 import colPercentileData from '../assets/json/ColPercentile.json';
 
+// Circular progressbar: 
+import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
+import RadialSeparators from "./RadialSeparators";
+import 'react-circular-progressbar/dist/styles.css';
+import '../assets/styles/Plots.css';
+
 import Plot from 'react-plotly.js';
 import { useMediaQuery } from 'react-responsive';
-
-import '../assets/styles/Plots.css';
 
 const Plots = ({ cole }) => {
     const keysPuntajesTest = ['L. Crítica', 'Matemáticas', 'C. Naturales', 'C. Sociales', 'Inglés']
     const colors = ['#E5824E', '#9B4E54', '#374E7C', '#9C3768', '#195A64', '#3EB6C4', '#8889C7']
+    const perimeter = 0.75;
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' })
+
     const mapPeriodos = {
         "2014.5": '2014 - B',
         "2015.0": '2015 - A',
@@ -253,7 +260,6 @@ const Plots = ({ cole }) => {
         },
         type: 'bar'
     };
-
     return (
         <div className='plots'>
             <Plot data={tracesOne}
@@ -293,6 +299,26 @@ const Plots = ({ cole }) => {
                 useResizeHandler={true}
                 style={{ width: "100%", height: "100%" }}>
             </Plot>
+            <div className='plots--percentile'>
+                <h3>Percentile</h3>
+                <div className='plots--percentile--progressbar'>
+                    <CircularProgressbarWithChildren value={colPercentileData[cole]}
+                        text={colPercentileData[cole]}
+                        circleRatio={perimeter}
+                        styles={buildStyles({ rotation: 1 - (perimeter / 2) })}>
+                        <RadialSeparators
+                            circleRatio={perimeter}
+                            count={9}
+                            style={{
+                                background: "#fff",
+                                width: "2px",
+                                // This needs to be equal to props.strokeWidth
+                                height: `${10}%`
+                            }}
+                        />
+                    </CircularProgressbarWithChildren>
+                </div>
+            </div>
         </div >
     );
 }

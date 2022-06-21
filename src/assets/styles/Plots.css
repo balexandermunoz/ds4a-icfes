@@ -9,6 +9,15 @@
   width: 50%;
   height: 50%;
 }
+.plots--percentile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.plots--percentile--progressbar {
+  width: 400px;
+}
 
 @media only screen and (max-width: 600px) {
   .plots--pies {
@@ -18,5 +27,8 @@
   .plots--pies--pie {
     width: 100%;
     height: 100%;
+  }
+  .plots--percentile--progressbar {
+    width: 200px;
   }
 }/*# sourceMappingURL=Plots.css.map */
