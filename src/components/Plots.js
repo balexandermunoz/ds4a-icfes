@@ -1,28 +1,48 @@
-import colTestMeanData from '../assets/json/ColPeriodTestMean_Plot1.json';
+import colTestMeanData from '../assets/json/ColPeriodTestMeanALL.json';
 import colEstratData from '../assets/json/ColEstrPerc_Plot4.json';
 import colTieneCompData from '../assets/json/ColTieneComp.json';
 import colTieneInterData from '../assets/json/ColTieneInter.json';
 import colLecturaDiariaData from '../assets/json/ColLecturaDiaria.json';
 import colInternetDiarioData from '../assets/json/ColInternetDiario.json';
+import colPercentileData from '../assets/json/ColPercentile.json';
 
 import Plot from 'react-plotly.js';
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 
 import '../assets/styles/Plots.css';
 
 const Plots = ({ cole }) => {
-    const keysPuntajes = ['P. Global', 'L. Crítica', 'Matemáticas', 'C. Naturales', 'C. Sociales', 'Inglés']
+    const keysPuntajesTest = ['L. Crítica', 'Matemáticas', 'C. Naturales', 'C. Sociales', 'Inglés']
     const colors = ['#E5824E', '#9B4E54', '#374E7C', '#9C3768', '#195A64', '#3EB6C4', '#8889C7']
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' })
-
+    const mapPeriodos = {
+        "2014.5": '2014 - B',
+        "2015.0": '2015 - A',
+        "2015.5": '2015 - B',
+        "2016.0": '2016 - A',
+        "2016.5": '2016 - B',
+        "2017.0": '2017 - A',
+        "2017.5": '2017 - B',
+        "2018.0": '2018 - A',
+        "2018.5": '2018 - B',
+        "2019.0": '2019 - A',
+        "2019.5": '2019 - B',
+        "2020.0": '2020 - A',
+        "2020.5": '2020 - B',
+        "2021.0": '2021 - A',
+        "2021.5": '2021 - B'
+    }
     // Average results per test:
     const layoutOne = {
-        showlegend: !isMobile,
+        showlegend: false,
         responsive: true,
         title: {
-            text: 'Trend line of average test results.'
+            text: 'Trend line of average global score.'
         },
         xaxis: {
+            tickmode: "array",
+            tickvals: Object.keys(colTestMeanData[cole]["P. Global"]),
+            ticktext: Object.keys(colTestMeanData[cole]["P. Global"]).map((year) => mapPeriodos[year]),
             title: {
                 text: 'Year',
                 font: {
@@ -43,7 +63,44 @@ const Plots = ({ cole }) => {
             }
         },
     }
-    const tracesOne = keysPuntajes.map((key) => (
+    const tracesOne = [{
+        x: Object.keys(colTestMeanData[cole]["P. Global"]),
+        y: Object.values(colTestMeanData[cole]["P. Global"]),
+        name: 'Global',
+        type: 'scatter'
+    }]
+
+    const layoutOneTest = {
+        showlegend: !isMobile,
+        responsive: true,
+        title: {
+            text: 'Trend line of average score per test.'
+        },
+        xaxis: {
+            tickmode: "array",
+            tickvals: Object.keys(colTestMeanData[cole]["P. Global"]),
+            ticktext: Object.keys(colTestMeanData[cole]["P. Global"]).map((year) => mapPeriodos[year]),
+            title: {
+                text: 'Year',
+                font: {
+                    family: 'Courier New, monospace',
+                    size: 18,
+                    color: '#7f7f7f'
+                }
+            },
+        },
+        yaxis: {
+            title: {
+                text: 'Average score',
+                font: {
+                    family: 'Courier New, monospace',
+                    size: 18,
+                    color: '#7f7f7f'
+                }
+            }
+        },
+    }
+    const tracesOneTests = keysPuntajesTest.map((key) => (
         {
             x: Object.keys(colTestMeanData[cole][key]),
             y: Object.values(colTestMeanData[cole][key]),
@@ -203,7 +260,11 @@ const Plots = ({ cole }) => {
                 layout={layoutOne}
                 useResizeHandler={true}
                 style={{ width: "100%", height: "100%" }}>
-
+            </Plot>
+            <Plot data={tracesOneTests}
+                layout={layoutOneTest}
+                useResizeHandler={true}
+                style={{ width: "100%", height: "100%" }}>
             </Plot>
             <Plot data={[tracesTwo]}
                 layout={layoutTwo}
@@ -232,7 +293,7 @@ const Plots = ({ cole }) => {
                 useResizeHandler={true}
                 style={{ width: "100%", height: "100%" }}>
             </Plot>
-        </div>
+        </div >
     );
 }
 
