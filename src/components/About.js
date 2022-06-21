@@ -39,11 +39,11 @@ const About = () => {
     return (
         <div className="analysis">
             <h1>About us</h1>
-            <AboutCard image={require("../assets/images/LauraRocha.jpg")} name={"Laura Rocha"} description={descriptions.Laura} social={socialMedia.Laura}></AboutCard>
-            <AboutCard image={require("../assets/images/BrayanMunoz.jpg")} name={"Brayan Muñoz"} description={descriptions.Brayan} social={socialMedia.Brayan}></AboutCard>
-            <AboutCard image={require("../assets/images/FelipeTorres.JPG")} name={"Felipe Torres"} description={descriptions.FelipeT} social={socialMedia.FelipeT}></AboutCard>
-            <AboutCard image={require("../assets/images/FelipeBetancur.png")} name={"Felipe Betancur"} description={descriptions.FelipeB} social={socialMedia.FelipeB}></AboutCard>
-            <AboutCard image={require("../assets/images/OrminsonSantos.png")} name={"Orminson Santos"} description={descriptions.Orminson} social={socialMedia.Orminson}></AboutCard>
+            <AboutCard image={require("../assets/images/LauraRocha.jpg")} name={"Laura Rocha"} description={descriptions.Laura} social={socialMedia.Laura} delay={500}></AboutCard>
+            <AboutCard image={require("../assets/images/BrayanMunoz.jpg")} name={"Brayan Muñoz"} description={descriptions.Brayan} social={socialMedia.Brayan} delay={1000}></AboutCard>
+            <AboutCard image={require("../assets/images/FelipeTorres.JPG")} name={"Felipe Torres"} description={descriptions.FelipeT} social={socialMedia.FelipeT} delay={2000}></AboutCard>
+            <AboutCard image={require("../assets/images/FelipeBetancur.png")} name={"Felipe Betancur"} description={descriptions.FelipeB} social={socialMedia.FelipeB} delay={3000}></AboutCard>
+            <AboutCard image={require("../assets/images/OrminsonSantos.png")} name={"Orminson Santos"} description={descriptions.Orminson} social={socialMedia.Orminson} delay={4000}></AboutCard>
         </div>
     );
 }

@@ -16,11 +16,18 @@ import '../assets/styles/Plots.css';
 import Plot from 'react-plotly.js';
 import { useMediaQuery } from 'react-responsive';
 
+import { useSpring, animated } from 'react-spring';
+
 const Plots = ({ cole }) => {
     const keysPuntajesTest = ['L. Crítica', 'Matemáticas', 'C. Naturales', 'C. Sociales', 'Inglés']
     const colors = ['#E5824E', '#9B4E54', '#374E7C', '#9C3768', '#195A64', '#3EB6C4', '#8889C7']
     const perimeter = 0.75;
-    const isMobile = useMediaQuery({ query: '(max-width: 600px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+    const animationStyle = useSpring({
+        from: { opacity: 0 },
+        to: { opacity: 1 },
+        config: { duration: 1000 }
+    });
 
     const mapPeriodos = {
         "2014.5": '2014 - B',
@@ -261,7 +268,7 @@ const Plots = ({ cole }) => {
         type: 'bar'
     };
     return (
-        <div className='plots'>
+        <animated.div className='plots' style={animationStyle}>
             <Plot data={tracesOne}
                 layout={layoutOne}
                 useResizeHandler={true}
@@ -319,8 +326,8 @@ const Plots = ({ cole }) => {
                     </CircularProgressbarWithChildren>
                 </div>
             </div>
-        </div >
-    );
+        </animated.div >
+    )
 }
 
 export default Plots;
