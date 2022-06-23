@@ -1,15 +1,21 @@
 import '../assets/styles/Home.css';
 import HomeCard from "./HomeCard";
-import {useState} from "react";
+import { useState } from "react";
 import Spinner from "react-spinkit";
 
-function Home(){
+import { motion } from 'framer-motion'
+
+HomeCard.defaultProps = {
+    imagePos: "left",
+}
+
+function Home() {
     const [isLoading, setIsLoading] = useState(true);
     const handleLoad = () => {
         setIsLoading(false)
     }
     const text = {
-        card1:`The SABER 11 Test is a standardized evaluation that measures the competences defined by quality benchmarks in Colombia.
+        card1: `The SABER 11 Test is a standardized evaluation that measures the competences defined by quality benchmarks in Colombia.
                 It is expected that all Colombian students manage to develop these skills during their time in basic and secondary education,
                 since they are necessary for their personal and professional life. We have accessed open data from the Colombian Government
                 to observe the performance of those evaluated. In this regard, the results are broken down according to territorial entity,
@@ -25,26 +31,29 @@ function Home(){
                 related to increasing the SABER tests results.`
     }
     return (
-        <div className="home">
+        <motion.div
+            className="home"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <h1>Homepage</h1>
             <div className={"home--map"}>
-                {isLoading && <Spinner name="circle" color={"steelblue"}/>}
-                <iframe id="serviceFrameSend"
-                        className={"home--map--frame"}
-                        src={process.env.PUBLIC_URL+"/plots/MainMap.html"}
-                        onLoad={handleLoad}
-                        target="frame">
+                {isLoading && <Spinner name="circle" color={"steelblue"} />}
+                <iframe title="Average score per departament Colombia" 
+                    id="serviceFrameSend"
+                    className={"home--map--frame"}
+                    style={{opacity: isLoading ? 0: 1 }}
+                    src={process.env.PUBLIC_URL + "/plots/MainMap.html"}
+                    onLoad={handleLoad}
+                    target="frame">
                 </iframe>
             </div>
             <HomeCard title={"What is the ICFES test?"} text={text.card1} image={require("../assets/images/Icfes1.jpg")}></HomeCard>
             <HomeCard title={"What is the project about?"} text={text.card2} image={require("../assets/images/analysis1.jpg")} imagePos={"right"}></HomeCard>
             <HomeCard title={"Why does this matter?"} text={text.card3} image={require("../assets/images/Report-Card.jpg")}></HomeCard>
-        </div>
+        </motion.div >
     );
-}
-
-HomeCard.defaultProps = {
-    imagePos: "left",
 }
 
 export default Home;

@@ -1,4 +1,6 @@
 import AboutCard from "./AboutCard";
+import { motion } from 'framer-motion'
+
 const About = () => {
     const descriptions = {
         'Laura': `My name is Laura Vanessa Rocha Laguna, I am 28 years old and I am a professional in international business and marketing
@@ -37,14 +39,17 @@ const About = () => {
         'Orminson': 'https://www.linkedin.com/in/orminson-santos-ariza-0ba399126'
     }
     return (
-        <div className="analysis">
+        <motion.div className="about"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}>
             <h1>About us</h1>
-            <AboutCard image={require("../assets/images/LauraRocha.jpg")} name={"Laura Rocha"} description={descriptions.Laura} social={socialMedia.Laura} delay={500}></AboutCard>
-            <AboutCard image={require("../assets/images/BrayanMunoz.jpg")} name={"Brayan Muñoz"} description={descriptions.Brayan} social={socialMedia.Brayan} delay={1000}></AboutCard>
-            <AboutCard image={require("../assets/images/FelipeTorres.JPG")} name={"Felipe Torres"} description={descriptions.FelipeT} social={socialMedia.FelipeT} delay={2000}></AboutCard>
-            <AboutCard image={require("../assets/images/FelipeBetancur.png")} name={"Felipe Betancur"} description={descriptions.FelipeB} social={socialMedia.FelipeB} delay={3000}></AboutCard>
-            <AboutCard image={require("../assets/images/OrminsonSantos.png")} name={"Orminson Santos"} description={descriptions.Orminson} social={socialMedia.Orminson} delay={4000}></AboutCard>
-        </div>
+            <AboutCard image={require("../assets/images/LauraRocha.jpg")} name={"Laura Rocha"} description={descriptions.Laura} social={socialMedia.Laura} cardDelay={500}></AboutCard>
+            <AboutCard image={require("../assets/images/BrayanMunoz.jpg")} name={"Brayan Muñoz"} description={descriptions.Brayan} social={socialMedia.Brayan} cardDelay={1500}></AboutCard>
+            <AboutCard image={require("../assets/images/FelipeTorres.JPG")} name={"Felipe Torres"} description={descriptions.FelipeT} social={socialMedia.FelipeT} cardDelay={2000}></AboutCard>
+            <AboutCard image={require("../assets/images/FelipeBetancur.png")} name={"Felipe Betancur"} description={descriptions.FelipeB} social={socialMedia.FelipeB} cardDelay={4000}></AboutCard>
+            <AboutCard image={require("../assets/images/OrminsonSantos.png")} name={"Orminson Santos"} description={descriptions.Orminson} social={socialMedia.Orminson} cardDelay={5000}></AboutCard>
+        </motion.div>
     );
 }
 

@@ -1,8 +1,13 @@
+import { motion } from 'framer-motion'
+
 const Models = () => {
     return (
-        <div className="analysis">
+        <motion.div className="models"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}>
             <h1>Models</h1>
-        </div>
+        </motion.div>
     );
 }
 

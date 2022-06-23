@@ -30,6 +30,7 @@
   color: #282c34;
   text-decoration: none;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 .analysis--link--button:hover {
   background-color: #dee8ff;

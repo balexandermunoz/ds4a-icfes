@@ -5,6 +5,8 @@ import Plots from './Plots';
 
 import '../assets/styles/Analysis.css';
 import colegiosData from '../assets/json/colegiosDane.json';
+import { motion } from 'framer-motion';
+
 
 const Analysis = () => {
     // Let's write the logic to select buttons:
@@ -35,19 +37,25 @@ const Analysis = () => {
         setCol(currCol)
     }
 
-    return (<div className="analysis">
-        <h1>How is my school doing in the ICFES test?</h1>
-        <div className={"analysis--buttons"}>
-            <AnalysisSelect name={"Departamento"} val={dep} options={departamentOptions} handleVal={handleDep}></AnalysisSelect>
-            <AnalysisSelect name={"Municipio"} val={mun} options={municipios} handleVal={handleMun}></AnalysisSelect>
-            <AnalysisSelect name={"Colegio"} val={col} options={colegios} handleVal={handleCol}></AnalysisSelect>
-        </div>
-        {Boolean(col) && <Plots cole={col} />}
-        <div className={"analysis--link"}>
-            Do you want to know how to increase your ICFES score? See our model here:
-            <Link className="analysis--link--button" to="/models"> Go to model! </Link>
-        </div>
-    </div >);
+    return (
+        <motion.div
+            className="analysis"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
+            <h1>How is my school doing in the ICFES test?</h1>
+            <div className={"analysis--buttons"}>
+                <AnalysisSelect name={"Departamento"} val={dep} options={departamentOptions} handleVal={handleDep}></AnalysisSelect>
+                <AnalysisSelect name={"Municipio"} val={mun} options={municipios} handleVal={handleMun}></AnalysisSelect>
+                <AnalysisSelect name={"Colegio"} val={col} options={colegios} handleVal={handleCol}></AnalysisSelect>
+            </div>
+            {Boolean(col) && <Plots cole={col} />}
+            <div className={"analysis--link"}>
+                Do you want to know how to increase your ICFES score? See our model here:
+                <Link className="analysis--link--button" to="/models"> Go to model! </Link>
+            </div>
+        </motion.div>);
 }
 
 export default Analysis;

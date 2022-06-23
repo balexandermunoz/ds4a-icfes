@@ -1,6 +1,6 @@
 // Json data:
 import colTestMeanData from '../assets/json/ColPeriodTestMeanALL.json';
-import colEstratData from '../assets/json/ColEstrPerc_Plot4.json';
+import colEstratData from '../assets/json/ColEstratoData.json';
 import colTieneCompData from '../assets/json/ColTieneComp.json';
 import colTieneInterData from '../assets/json/ColTieneInter.json';
 import colLecturaDiariaData from '../assets/json/ColLecturaDiaria.json';
@@ -15,7 +15,6 @@ import '../assets/styles/Plots.css';
 
 import Plot from 'react-plotly.js';
 import { useMediaQuery } from 'react-responsive';
-
 import { useSpring, animated } from 'react-spring';
 
 const Plots = ({ cole }) => {
@@ -26,7 +25,9 @@ const Plots = ({ cole }) => {
     const animationStyle = useSpring({
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: { duration: 1000 }
+        reset: true,
+        delay: 0,
+        duration: 5000,
     });
 
     const mapPeriodos = {
@@ -150,9 +151,10 @@ const Plots = ({ cole }) => {
             }
         },
     }
+    const totalEstrato = Object.values(colEstratData[cole]).reduce((partialSum, a) => partialSum + a, 0);
     const tracesTwo = {
         x: Object.keys(colEstratData[cole]),
-        y: Object.values(colEstratData[cole]).map((x) => x * 100),
+        y: Object.values(colEstratData[cole]).map((x) => (x / totalEstrato) * 100),
         name: 'Barplot',
         marker: {
             color: Object.values(colEstratData[cole]).map((x, idx) => colors[idx]),
@@ -268,6 +270,7 @@ const Plots = ({ cole }) => {
         type: 'bar'
     };
     return (
+
         <animated.div className='plots' style={animationStyle}>
             <Plot data={tracesOne}
                 layout={layoutOne}

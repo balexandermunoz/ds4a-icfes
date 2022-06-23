@@ -2,12 +2,13 @@ import '../assets/styles/AboutCard.css';
 import { useMediaQuery } from 'react-responsive';
 import { useSpring, animated } from 'react-spring';
 
-const HomeCard = ({ name, image, description, social, delay }) => {
+const HomeCard = ({ name, image, description, social, cardDelay }) => {
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
     const animationStyle = useSpring({
-        from: { opacity: 0, marginTop: 500 },
-        to: { opacity: 1, marginTop: 0 },
-        config: { delay: delay, duration: delay }
+        from: { opacity: 0 },
+        to: { opacity: 1 },
+        delay: cardDelay,
+        config: {duration: 1000}
     })
     return (
         <animated.div style={animationStyle} className={"about--card"}>
