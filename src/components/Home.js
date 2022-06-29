@@ -1,19 +1,11 @@
+import { motion } from 'framer-motion'
 import '../assets/styles/Home.css';
 import HomeCard from "./HomeCard";
-import { useState } from "react";
-import Spinner from "react-spinkit";
+import MainMap from "./MainMap"
 
-import { motion } from 'framer-motion'
-
-HomeCard.defaultProps = {
-    imagePos: "left",
-}
+HomeCard.defaultProps = { imagePos: "left" }
 
 function Home() {
-    const [isLoading, setIsLoading] = useState(true);
-    const handleLoad = () => {
-        setIsLoading(false)
-    }
     const text = {
         card1: `The SABER 11 Test is a standardized evaluation that measures the competences defined by quality benchmarks in Colombia.
                 It is expected that all Colombian students manage to develop these skills during their time in basic and secondary education,
@@ -39,15 +31,7 @@ function Home() {
         >
             <h1>Homepage</h1>
             <div className={"home--map"}>
-                {isLoading && <Spinner name="circle" color={"steelblue"} />}
-                <iframe title="Average score per departament Colombia" 
-                    id="serviceFrameSend"
-                    className={"home--map--frame"}
-                    style={{opacity: isLoading ? 0: 1 }}
-                    src={process.env.PUBLIC_URL + "/plots/MainMap.html"}
-                    onLoad={handleLoad}
-                    target="frame">
-                </iframe>
+                <MainMap></MainMap>
             </div>
             <HomeCard title={"What is the ICFES test?"} text={text.card1} image={require("../assets/images/Icfes1.jpg")}></HomeCard>
             <HomeCard title={"What is the project about?"} text={text.card2} image={require("../assets/images/analysis1.jpg")} imagePos={"right"}></HomeCard>
