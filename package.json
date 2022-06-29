@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@observablehq/runtime": "^4.22.2",
+    "@balexandermunoz/mapa-de-colombia-con-san-andres-y-providencia": "https://api.observablehq.com/@balexandermunoz/mapa-de-colombia-con-san-andres-y-providencia.tgz?v=3",
+    "@observablehq/runtime": "^4.22.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^12.0.0",
