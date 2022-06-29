@@ -1,4 +1,5 @@
 const AnalysisSelect = ({name,val,handleVal,options}) => {
+    // console.log(options)
     return (
         <select value={val}
                 onChange={handleVal}
