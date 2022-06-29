@@ -1,5 +1,9 @@
-.analysis--plot {
-  border: 0;
+.analysis--spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .analysis--buttons {
   display: flex;
