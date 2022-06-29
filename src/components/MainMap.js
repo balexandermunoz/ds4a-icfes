@@ -5,7 +5,6 @@ import notebook from "@balexandermunoz/mapa-de-colombia-con-san-andres-y-provide
 function MapaDeColombiaConSanAndresYProvidencia() {
   const chartRef = useRef();
   const [isLoading, setIsLoading] = useState(true);
-  console.log(isLoading);
   const handleLoad = () => {
       setIsLoading(false)
   }
