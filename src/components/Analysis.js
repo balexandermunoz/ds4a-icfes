@@ -11,7 +11,7 @@ import '../assets/styles/Analysis.css';
 
 const Analysis = () => {
     // Let's write the logic to select buttons:
-    const { data:colegiosData, isLoading, isError } = useFetch('http://ec2-54-83-150-132.compute-1.amazonaws.com:8888/MasterData/School');
+    const { data:colegiosData, isLoading, isError } = useFetch('https://ec2-54-83-150-132.compute-1.amazonaws.com/MasterData/School');
 
     const [dep, setDep] = useState("");
     const [mun, setMun] = useState("");
