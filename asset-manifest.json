@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/ds4a-icfes/static/css/main.71e93e71.css",
-    "main.js": "/ds4a-icfes/static/js/main.29b7405d.js",
+    "main.css": "/ds4a-icfes/static/css/main.a62dd3be.css",
+    "main.js": "/ds4a-icfes/static/js/main.1f30ad98.js",
     "static/js/787.ff093841.chunk.js": "/ds4a-icfes/static/js/787.ff093841.chunk.js",
     "static/media/BrayanMunoz.jpg": "/ds4a-icfes/static/media/BrayanMunoz.dd81a241ce4d80ac951c.jpg",
     "static/media/FelipeBetancur.png": "/ds4a-icfes/static/media/FelipeBetancur.8024b621c2ffee037f34.png",
+    "static/media/JorjhanLeal.jpg": "/ds4a-icfes/static/media/JorjhanLeal.da86107eec4c0b9f245c.jpg",
     "static/media/LauraRocha.jpg": "/ds4a-icfes/static/media/LauraRocha.3c37cefb2727715c57d4.jpg",
     "static/media/OrminsonSantos.png": "/ds4a-icfes/static/media/OrminsonSantos.9093aea8f578553082cf.png",
     "static/media/analysis1.jpg": "/ds4a-icfes/static/media/analysis1.af10bd7a2b6194735ffc.jpg",
@@ -15,12 +16,12 @@
     "static/media/home.svg": "/ds4a-icfes/static/media/home.36f2c37bd443b3596f51fedc801d7256.svg",
     "index.html": "/ds4a-icfes/index.html",
     "static/media/scatter-plot.svg": "/ds4a-icfes/static/media/scatter-plot.74fc77dca309deed8647d01217591615.svg",
-    "main.71e93e71.css.map": "/ds4a-icfes/static/css/main.71e93e71.css.map",
-    "main.29b7405d.js.map": "/ds4a-icfes/static/js/main.29b7405d.js.map",
+    "main.a62dd3be.css.map": "/ds4a-icfes/static/css/main.a62dd3be.css.map",
+    "main.1f30ad98.js.map": "/ds4a-icfes/static/js/main.1f30ad98.js.map",
     "787.ff093841.chunk.js.map": "/ds4a-icfes/static/js/787.ff093841.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71e93e71.css",
-    "static/js/main.29b7405d.js"
+    "static/css/main.a62dd3be.css",
+    "static/js/main.1f30ad98.js"
   ]
 }
