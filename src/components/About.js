@@ -28,7 +28,11 @@ const About = () => {
                      as well as the design and analysis of previous requirements of their acquisition focused on the strategic objectives of the institution covering the processes, applications, information/data,
                      infrastructure and services, of the technological direction of the National Police. I am passionate about the world of data and therefore face this challenge of training in Data Science through the
                      Ministerio TIC and Correlation One DS4A, to contribute within the National Police in strengthen and generate new institutional capacities through the analysis of the needs and information of the processes
-                     that enable the constitutional mission, and the approach of analytical models that allow guiding the decisions of the command at its different management levels.`
+                     that enable the constitutional mission, and the approach of analytical models that allow guiding the decisions of the command at its different management levels.`,
+        'Jorjhan':  `I’m a Chemical Engineer and M.Sc. in Chemical Engineering from Los Andes University, Colombia. I have experience in research, education, and analytics. Currently, I am focused on implementing
+                     novel technologies in agriculture (IoT, ML). My strengths include model development, analysis, communication, and problem-solving. I have knowledge of python, SQL, R,
+                     and GAMS, among other programming languages. I’m passionate about education, cooking, and thermodynamics.`,
+        'Julian':  `This guy never send his description. <span>&#128532;</span>`
     }
     const socialMedia = {
         'Laura': 'https://www.linkedin.com/in/laura-vanessa-rocha-laguna-78b598176/',
@@ -36,7 +40,8 @@ const About = () => {
         'FelipeT': '/',
         'FelipeB': 'https://www.linkedin.com/in/juanfebeta/',
         'Julian': 'https://www.linkedin.com/in/julian-garzon-transformacion-agilismo-software/?locale=en_US',
-        'Orminson': 'https://www.linkedin.com/in/orminson-santos-ariza-0ba399126'
+        'Orminson': 'https://www.linkedin.com/in/orminson-santos-ariza-0ba399126',
+        'Jorjhan': 'https://www.linkedin.com/in/jorjhan-leal-ortiz/'
     }
     return (
         <motion.div className="about"
@@ -44,11 +49,12 @@ const About = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}>
             <h1>About us</h1>
-            <AboutCard image={require("../assets/images/LauraRocha.jpg")} name={"Laura Rocha"} description={descriptions.Laura} social={socialMedia.Laura} cardDelay={500}></AboutCard>
-            <AboutCard image={require("../assets/images/BrayanMunoz.jpg")} name={"Brayan Muñoz"} description={descriptions.Brayan} social={socialMedia.Brayan} cardDelay={1500}></AboutCard>
+            <AboutCard image={require("../assets/images/BrayanMunoz.jpg")} name={"Brayan Muñoz"} description={descriptions.Brayan} social={socialMedia.Brayan} cardDelay={500}></AboutCard>
+            <AboutCard image={require("../assets/images/LauraRocha.jpg")} name={"Laura Rocha"} description={descriptions.Laura} social={socialMedia.Laura} cardDelay={1500}></AboutCard>
             <AboutCard image={require("../assets/images/FelipeTorres.JPG")} name={"Felipe Torres"} description={descriptions.FelipeT} social={socialMedia.FelipeT} cardDelay={2000}></AboutCard>
             <AboutCard image={require("../assets/images/FelipeBetancur.png")} name={"Felipe Betancur"} description={descriptions.FelipeB} social={socialMedia.FelipeB} cardDelay={4000}></AboutCard>
             <AboutCard image={require("../assets/images/OrminsonSantos.png")} name={"Orminson Santos"} description={descriptions.Orminson} social={socialMedia.Orminson} cardDelay={5000}></AboutCard>
+            <AboutCard image={require("../assets/images/JorjhanLeal.jpg")} name={"Jorjhan Leal"} description={descriptions.Jorjhan} social={socialMedia.Jorjhan} cardDelay={6000}></AboutCard>
         </motion.div>
     );
 }
