@@ -6,7 +6,7 @@ const useFetch = (url) => {
     const [isError, setIsError] = useState(null);
     useEffect(() => {
         console.log("Fetching data...")
-        fetch(url)
+        fetch(url, {mode: 'cors'})
         .then(response => {
             if(!response.ok) {
                 throw Error('Could not fetch the data for that resource')
