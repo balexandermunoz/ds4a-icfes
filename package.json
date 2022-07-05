@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@balexandermunoz/mapa-de-colombia-con-san-andres-y-providencia": "https://api.observablehq.com/@balexandermunoz/mapa-de-colombia-con-san-andres-y-providencia.tgz?v=3",
-    "@observablehq/runtime": "^4.22.4",
+    "@observablehq/runtime": "^4.22.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^12.0.0",
@@ -24,7 +24,7 @@
     "react-plotly.js": "^2.5.1",
     "react-responsive": "^9.0.0-beta.10",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-spinkit": "^3.0.0",
     "react-spring": "^9.4.5",
     "stream": "^0.0.2",
