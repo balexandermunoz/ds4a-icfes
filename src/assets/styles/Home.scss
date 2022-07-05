@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
 .home--card {
   background-color: #E6F3FE;
   display: flex;
@@ -14,6 +16,12 @@
     height: 200px;
     border-radius: 100px;
     opacity: 0.8;
+  }
+
+  &--text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
   }
 
   &:hover{
