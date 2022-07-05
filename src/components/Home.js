@@ -29,12 +29,12 @@ function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <h1>Homepage</h1>
+            <h1>Home</h1>
             <div className={"home--map"}>
                 <MainMap></MainMap>
             </div>
-            <HomeCard title={"What is the ICFES test?"} text={text.card1} image={require("../assets/images/Icfes1.jpg")}></HomeCard>
-            <HomeCard title={"What is the project about?"} text={text.card2} image={require("../assets/images/analysis1.jpg")} imagePos={"right"}></HomeCard>
+            <HomeCard title={"What is the SABER test?"} text={text.card1} image={require("../assets/images/Icfes1.jpg")}></HomeCard>
+            <HomeCard title={"What is the project about?"} text={text.card2} image={require("../assets/images/analysis1.jpg")}></HomeCard>
             <HomeCard title={"Why does this matter?"} text={text.card3} image={require("../assets/images/Report-Card.jpg")}></HomeCard>
         </motion.div >
     );
