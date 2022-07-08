@@ -1,41 +1,17 @@
-import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import Spinner from "react-spinkit";
 
 import AnalysisSelect from "./AnalysisSelect";
-import useFetch from '../scripts/useFetch';
 import Plots from './Plots';
 
 import '../assets/styles/Analysis.css';
 
-const Analysis = () => {
-    const { data:colegiosData, isLoading, isError } = useFetch('https://icfes-ds4a.xyz/MasterData/School');
-
-    const [dep, setDep] = useState("");
-    const [mun, setMun] = useState("");
-    const [col, setCol] = useState("");
-    const [municipios, setMunicipios] = useState([]);
-    const [colegios, setColegios] = useState([]);
-
-    const handleDep = (e) => {
-        const currDpto = e.target.value
-        const currMunicipios = Object.keys(colegiosData[currDpto])
-        setDep(currDpto)
-        setMunicipios(currMunicipios)
-        setMun("")
-        setCol("")
-    }
-    const handleMun = (e) => {
-        const currMun = e.target.value
-        setMun(currMun)
-        setCol("")
-        setColegios(Object.values(colegiosData[dep][currMun]))
-    }
-    const handleCol = (e) => {
-        const currCol = e.target.value
-        setCol(currCol)
-    }
+const Analysis = (props) => {
+    const {dep, handleDep} = props.depData;
+    const {mun, municipios, handleMun} = props.munData;
+    const {col, colegios, handleCol} = props.colData;
+    const {colegiosData, isLoading, isError} = props.fetchData;
 
     return (
         <motion.div
@@ -51,7 +27,7 @@ const Analysis = () => {
                 <AnalysisSelect name={"Municipio"} val={mun} options={municipios} handleVal={handleMun}></AnalysisSelect>
                 <AnalysisSelect name={"Colegio"} val={col} options={colegios} handleVal={handleCol}></AnalysisSelect>
             </div>}
-            {Boolean(col) && <Plots cole={col} />}
+            {col && <Plots cole={col} />}
             <div className={"analysis--link"}>
                 Do you want to know how to increase your SABER score? See our model here:
                 <Link className="analysis--link--button" to="/models"> Go to model! </Link>
