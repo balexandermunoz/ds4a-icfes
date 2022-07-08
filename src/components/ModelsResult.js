@@ -33,12 +33,13 @@ const ModelsResult = ({ col }) => {
         });
         setOverflow(false);
     }
+
     return (
         <div>
             {isFeatError && <div> Sorry, data not aviliable <span>&#128532;</span> </div>}
             {isFeatLoading && <div className='analysis--spinner'> Loading data... <Spinner name="circle" color={"steelblue"} /> </div>}
             <div className='models--containertable'>
-                {featuresData &&
+                {featuresData && col &&
                     <table className='models--containertable--table'>
                         <thead>
                             <tr>
@@ -50,9 +51,9 @@ const ModelsResult = ({ col }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {featuresData.SchoolSummary.map((key) => {
+                            {featuresData.SchoolSummary.map((key, idx) => {
                                 return (
-                                    <tr>
+                                    <tr key={idx}>
                                         <td onClick={() => { handleCellClick(key.feature) }}> {featuresMap[key.feature]} </td>
                                         <td> {Math.round(key.mean * 100) / 100} </td>
                                         <td> {Math.round(key.min * 100) / 100} </td>
