@@ -18,9 +18,8 @@ const Models = (props) => {
             <div className='models--explanation'>
                 <p> In this section, we would be able to identify specific variables that impact, both in positive and negative way, over the global score, at the school level. </p>
                 <p> Then again, we indicate to the model which specific institution are we interested in. Once we tell the model our school of interest, the model will show a table breaking down those variables that are impacting the school’s overall score performance, sorted by those variables that are most likely to add the most, to those that are most likely to subtract the most.
-                    Once the table shows up, we can click on the variable of interest and drill down into it.
-                    Should a variable be clicked, 2 box-plots will be rendered for each category within the selected variable of interest: One for the school’s cluster, and one for the school itself. </p>
-                <p> Should a variable be clicked, 2 box-plots will be rendered for each category within the selected variable of interest.</p>
+                    Once the table shows up, we can click on the variable of interest and drill down into it.</p>
+                <p> Should a variable be clicked, 2 box-plots will be rendered for each category within the selected variable of interest: One for the school’s cluster, and one for the school itself.</p>
                 <p> The purpose of this visualization is to get a broad idea of which categories are impacting the variable the most: which ones are most likely to add point and which ones are most likely to take points away.
                     From an educational institution point of view, we are interested in two points:</p>
                 <ul>
