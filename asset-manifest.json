@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ds4a-icfes/static/css/main.a62dd3be.css",
-    "main.js": "/ds4a-icfes/static/js/main.1f30ad98.js",
+    "main.css": "/ds4a-icfes/static/css/main.45c59a1f.css",
+    "main.js": "/ds4a-icfes/static/js/main.73699354.js",
     "static/js/787.ff093841.chunk.js": "/ds4a-icfes/static/js/787.ff093841.chunk.js",
     "static/media/BrayanMunoz.jpg": "/ds4a-icfes/static/media/BrayanMunoz.dd81a241ce4d80ac951c.jpg",
     "static/media/FelipeBetancur.png": "/ds4a-icfes/static/media/FelipeBetancur.8024b621c2ffee037f34.png",
@@ -16,12 +16,12 @@
     "static/media/home.svg": "/ds4a-icfes/static/media/home.36f2c37bd443b3596f51fedc801d7256.svg",
     "index.html": "/ds4a-icfes/index.html",
     "static/media/scatter-plot.svg": "/ds4a-icfes/static/media/scatter-plot.74fc77dca309deed8647d01217591615.svg",
-    "main.a62dd3be.css.map": "/ds4a-icfes/static/css/main.a62dd3be.css.map",
-    "main.1f30ad98.js.map": "/ds4a-icfes/static/js/main.1f30ad98.js.map",
+    "main.45c59a1f.css.map": "/ds4a-icfes/static/css/main.45c59a1f.css.map",
+    "main.73699354.js.map": "/ds4a-icfes/static/js/main.73699354.js.map",
     "787.ff093841.chunk.js.map": "/ds4a-icfes/static/js/787.ff093841.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a62dd3be.css",
-    "static/js/main.1f30ad98.js"
+    "static/css/main.45c59a1f.css",
+    "static/js/main.73699354.js"
   ]
 }
