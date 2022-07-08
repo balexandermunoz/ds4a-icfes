@@ -1,3 +1,7 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
@@ -23,6 +27,6 @@
 }
 
 /* No display the toolkit bar in plotly map */
-.modebar-group{
+.modebar-group {
   display: none !important;
 }

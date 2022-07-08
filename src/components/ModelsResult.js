@@ -1,17 +1,19 @@
 import ModelPlots from './ModelPlots';
 import { useState } from 'react';
+import Spinner from "react-spinkit";
 import useFetch from '../scripts/useFetch';
 
 const ModelsResult = ({ col }) => {
 
     const { data: featuresData, isLoading: isFeatLoading, isError: isFeatError } = useFetch("https://icfes-ds4a.xyz/Model/Regression/" + col)
     const [feature, setFeature] = useState('');
+    const [overflow, setOverflow] = useState(true);
     const featuresMap = {
         'estu_lectura_shap': 'Time allocation to reading',
         'estu_internet_shap': 'Internet access',
         'estu_trabajo_shap': 'Whether the students work',
         'fami_estratovivienda_shap': 'Household socioeconomic stratification',
-        'estu_femenino_shap': 'Genre',
+        'estu_femenino_shap': 'Gender',
         'cole_jornada_shap': 'School day shift',
         'cole_caracter_shap': 'School format',
         'acceso_tecnologia_shap': 'Technology access', // Access to TV, access to PC and access to gaming.
@@ -23,13 +25,18 @@ const ModelsResult = ({ col }) => {
     }
 
     const handleCellClick = (feat) => {
-        console.log(feat)
         setFeature(feat)
+        window.scroll({
+            top: document.body.offsetHeight,
+            left: 0,
+            behavior: 'smooth',
+        });
+        setOverflow(false);
     }
     return (
         <div>
             {isFeatError && <div> Sorry, data not aviliable <span>&#128532;</span> </div>}
-            {isFeatLoading && <div> Loading data... </div>}
+            {isFeatLoading && <div className='analysis--spinner'> Loading data... <Spinner name="circle" color={"steelblue"} /> </div>}
             <div className='models--containertable'>
                 {featuresData &&
                     <table className='models--containertable--table'>
@@ -39,7 +46,7 @@ const ModelsResult = ({ col }) => {
                                 <th>Mean</th>
                                 <th>Min</th>
                                 <th>Max</th>
-                                <th>Rank</th>
+                                <th>Range</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,8 +64,8 @@ const ModelsResult = ({ col }) => {
                         </tbody>
                     </table>
                 }
-
                 {feature && <ModelPlots feat={feature} featData={featuresData}></ModelPlots>}
+                {overflow && <div style={{ height: "300px" }}></div>}
             </div>
         </div>
     );

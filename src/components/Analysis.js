@@ -8,10 +8,10 @@ import Plots from './Plots';
 import '../assets/styles/Analysis.css';
 
 const Analysis = (props) => {
-    const {dep, handleDep} = props.depData;
-    const {mun, municipios, handleMun} = props.munData;
-    const {col, colegios, handleCol} = props.colData;
-    const {colegiosData, isLoading, isError} = props.fetchData;
+    const { dep, handleDep } = props.depData;
+    const { mun, municipios, handleMun } = props.munData;
+    const { col, colegios, handleCol } = props.colData;
+    const { colegiosData, isLoading, isError } = props.fetchData;
 
     return (
         <motion.div

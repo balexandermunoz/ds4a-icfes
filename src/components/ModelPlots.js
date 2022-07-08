@@ -6,15 +6,12 @@ const ModelPlots = ({ feat, featData }) => {
     const colegioDataCat = featData.SchoolSummaryCategory[featName]
     const clusterDataCat = featData.ClusterSummaryCategory[featName]
 
-    console.log(colegioDataCat)
-    console.log(clusterDataCat)
-
     const featuresMap = {
         'estu_lectura_shap': 'Time allocation to reading',
         'estu_internet_shap': 'Internet access',
         'estu_trabajo_shap': 'Whether the students work',
         'fami_estratovivienda_shap': 'Household socioeconomic stratification',
-        'estu_femenino_shap': 'Genre',
+        'estu_femenino_shap': 'Gender',
         'cole_jornada_shap': 'School day shift',
         'cole_caracter_shap': 'School format',
         'acceso_tecnologia_shap': 'Technology access', // Access to TV, access to PC and access to gaming.
@@ -70,8 +67,8 @@ const ModelPlots = ({ feat, featData }) => {
             1: 'Lee'
         },
         'estu_femenino': {
-            0: 'Femenino',
-            1: 'Masculino'
+            0: 'Masculino',
+            1: 'Femenino'
         },
         'acceso_transporte': {
             0: 'No',

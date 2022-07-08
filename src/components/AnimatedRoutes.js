@@ -9,7 +9,7 @@ import About from "./About";
 
 const AnimatedRoutes = () => {
     const location = useLocation();
-    const { data:colegiosData, isLoading, isError } = useFetch('https://icfes-ds4a.xyz/MasterData/School');
+    const { data: colegiosData, isLoading, isError } = useFetch('https://icfes-ds4a.xyz/MasterData/School');
 
     const [dep, setDep] = useState("");
     const [mun, setMun] = useState("");
@@ -36,10 +36,10 @@ const AnimatedRoutes = () => {
         setCol(currCol)
     }
 
-    const depData = {dep, handleDep}
-    const munData = {mun, municipios, handleMun}
-    const colData = {col, colegios, handleCol}
-    const fetchData = {colegiosData, isLoading, isError}
+    const depData = { dep, handleDep }
+    const munData = { mun, municipios, handleMun }
+    const colData = { col, colegios, handleCol }
+    const fetchData = { colegiosData, isLoading, isError }
 
     return (
         <AnimatePresence exitBeforeEnter>
@@ -49,8 +49,8 @@ const AnimatedRoutes = () => {
                     <Analysis depData={depData} munData={munData} colData={colData} fetchData={fetchData} />} />
                 <Route path="/models" element={
                     <Models depData={depData} munData={munData} colData={colData} fetchData={fetchData} />
-                    } />
-                <Route path="/about"  element={<About />} />
+                } />
+                <Route path="/about" element={<About />} />
             </Routes>
         </AnimatePresence>
     );
