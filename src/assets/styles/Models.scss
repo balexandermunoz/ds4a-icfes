@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+$header-color: #7c91cc;
+$odd-color: #d3d2d2;
+$even-color: #ffffff;
+$hover-color: #7c91cc;
+$hover-color-shadow: #47557c;
+$button-color: #0A98AC;
+$button-color-shadow: #076875;
+
+.models {
+    &--explanation {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.1em;
+        font-weight: 500;
+        margin: 20px;
+        text-align: left;
+    }
+
+    &--containertable {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        &--table {
+            text-align: left;
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            display: table;
+            padding: 0 0 0 0;
+            border-radius: 20px;
+        }
+
+        & td {
+            font-weight: normal;
+            font-size: 1em;
+            -webkit-box-shadow: 0 2px 2px -2px $hover-color;
+            -moz-box-shadow: 0 2px 2px -2px &$hover-color;
+            box-shadow: 0 2px 2px -2px &$hover-color;
+        }
+
+        & td,
+        th {
+            padding-bottom: 2%;
+            padding-top: 2%;
+            padding-left: 2%;
+        }
+
+        & tr:nth-child(odd) {
+            background-color: $odd-color;
+        }
+
+        & tr:nth-child(even) {
+            background-color: $even-color;
+        }
+
+        & th {
+            background-color: $header-color;
+        }
+
+        & td:first-child {
+            font-weight: bold;
+            color: black;
+        }
+
+        & tr:hover {
+            background-color: $hover-color;
+            -webkit-box-shadow: 0 6px 6px -6px $hover-color-shadow;
+            -moz-box-shadow: 0 6px 6px -6px $hover-color-shadow;
+            box-shadow: 0 6px 6px -6px $hover-color-shadow;
+        }
+
+        & tr td:first-child:hover {
+            cursor: pointer;
+            background-color: $button-color;
+            color: #403E10;
+            font-weight: bold;
+
+            box-shadow: $button-color-shadow -0.5px 0.5px, $button-color-shadow -1px 1px, $button-color-shadow -1.5px 1.5px, $button-color-shadow -2px 2px, $button-color-shadow -2.5px 2.5px, $button-color-shadow -3px 3px;
+            transform: translate3d(3px, -3px, 0);
+
+            transition-delay: 0s;
+            transition-duration: 0.4s;
+            transition-property: all;
+            transition-timing-function: line;
+        }
+    }
+}
