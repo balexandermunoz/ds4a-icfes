@@ -17,7 +17,7 @@ const HomeCard = ({ name, image, description, social, cardDelay }) => {
                 <div className={"about--card--leftcol--container"}>
                     <img className={"about--card--leftcol--container--image"} src={image} alt="" />
                     <a href={social} className={"about--card--leftcol--container--anchor"} title="User Profile" target={"_blank"} rel={"noreferrer"}>
-                        <img src={require("../assets/images/linkedin-circled.gif")} alt="Linkedin Logo" width={"60px"} height={"60px"} />
+                        {social && <img src={require("../assets/images/linkedin-circled.gif")} alt="Linkedin Logo" width={"60px"} height={"60px"} />}
                     </a>
                 </div>
             </div>
@@ -25,7 +25,7 @@ const HomeCard = ({ name, image, description, social, cardDelay }) => {
                 <p className={"about--card--rightcol--description"}>{description}</p>
                 {isMobile &&
                     <a href={social} title="User Profile" target={"_blank"} rel={"noreferrer"}>
-                        <img src={require("../assets/images/LI-In-Bug.png")} alt="Linkedin Logo" width={"32.5px"} height={"30px"} />
+                        {social && <img src={require("../assets/images/LI-In-Bug.png")} alt="Linkedin Logo" width={"32.5px"} height={"30px"} />}
                     </a>
                 }
             </div>

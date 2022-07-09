@@ -32,16 +32,18 @@ const About = () => {
         'Jorjhan':  `I’m a Chemical Engineer and M.Sc. in Chemical Engineering from Los Andes University, Colombia. I have experience in research, education, and analytics. Currently, I am focused on implementing
                      novel technologies in agriculture (IoT, ML). My strengths include model development, analysis, communication, and problem-solving. I have knowledge of python, SQL, R,
                      and GAMS, among other programming languages. I’m passionate about education, cooking, and thermodynamics.`,
-        'Julian':  `This guy never send his description. <span>&#128532;</span>`
+        'Julian':  `I optimize the processes of companies, through digital transformation, the implementation of technological solutions, releasing functional versions of software to the market as soon as possible,
+                    to leverage the growth of companies and their profits in this era of emerging technologies.`
     }
     const socialMedia = {
         'Laura': 'https://www.linkedin.com/in/laura-vanessa-rocha-laguna-78b598176/',
         'Brayan': 'https://www.linkedin.com/in/balexandermunoz/',
-        'FelipeT': '/',
+        'FelipeT': null,
         'FelipeB': 'https://www.linkedin.com/in/juanfebeta/',
         'Julian': 'https://www.linkedin.com/in/julian-garzon-transformacion-agilismo-software/?locale=en_US',
         'Orminson': 'https://www.linkedin.com/in/orminson-santos-ariza-0ba399126',
-        'Jorjhan': 'https://www.linkedin.com/in/jorjhan-leal-ortiz/'
+        'Jorjhan': 'https://www.linkedin.com/in/jorjhan-leal-ortiz/',
+        'Julian': null,
     }
     return (
         <motion.div className="about"
@@ -55,6 +57,7 @@ const About = () => {
             <AboutCard image={require("../assets/images/FelipeBetancur.png")} name={"Felipe Betancur"} description={descriptions.FelipeB} social={socialMedia.FelipeB} cardDelay={4000}></AboutCard>
             <AboutCard image={require("../assets/images/OrminsonSantos.png")} name={"Orminson Santos"} description={descriptions.Orminson} social={socialMedia.Orminson} cardDelay={5000}></AboutCard>
             <AboutCard image={require("../assets/images/JorjhanLeal.jpg")} name={"Jorjhan Leal"} description={descriptions.Jorjhan} social={socialMedia.Jorjhan} cardDelay={6000}></AboutCard>
+            <AboutCard image={require("../assets/images/JulianEduardo2.jpg")} name={"Julian Eduardo"} description={descriptions.Julian} social={socialMedia.Julian} cardDelay={6000}></AboutCard>
         </motion.div>
     );
 }
