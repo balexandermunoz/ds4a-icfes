@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ds4a-icfes/static/css/main.2a4f7b9e.css",
-    "main.js": "/ds4a-icfes/static/js/main.64b6d985.js",
+    "main.js": "/ds4a-icfes/static/js/main.9f516d09.js",
     "static/js/787.ff093841.chunk.js": "/ds4a-icfes/static/js/787.ff093841.chunk.js",
     "static/media/BrayanMunoz.jpg": "/ds4a-icfes/static/media/BrayanMunoz.dd81a241ce4d80ac951c.jpg",
     "static/media/FelipeBetancur.png": "/ds4a-icfes/static/media/FelipeBetancur.8024b621c2ffee037f34.png",
@@ -10,6 +10,7 @@
     "static/media/OrminsonSantos.png": "/ds4a-icfes/static/media/OrminsonSantos.9093aea8f578553082cf.png",
     "static/media/analysis1.jpg": "/ds4a-icfes/static/media/analysis1.af10bd7a2b6194735ffc.jpg",
     "static/media/FelipeTorres.JPG": "/ds4a-icfes/static/media/FelipeTorres.4213945b7554f4134a22.JPG",
+    "static/media/JulianEduardo2.jpg": "/ds4a-icfes/static/media/JulianEduardo2.481221fc9d43dffb6aca.jpg",
     "static/media/Report-Card.jpg": "/ds4a-icfes/static/media/Report-Card.0d06e6a0ff111a1242f9.jpg",
     "static/media/linkedin-circled.gif": "/ds4a-icfes/static/media/linkedin-circled.f291e0697cd4aa5eb72f.gif",
     "static/media/Icfes1.jpg": "/ds4a-icfes/static/media/Icfes1.71244e07ad8b963cb7fd.jpg",
@@ -17,11 +18,11 @@
     "index.html": "/ds4a-icfes/index.html",
     "static/media/scatter-plot.svg": "/ds4a-icfes/static/media/scatter-plot.74fc77dca309deed8647d01217591615.svg",
     "main.2a4f7b9e.css.map": "/ds4a-icfes/static/css/main.2a4f7b9e.css.map",
-    "main.64b6d985.js.map": "/ds4a-icfes/static/js/main.64b6d985.js.map",
+    "main.9f516d09.js.map": "/ds4a-icfes/static/js/main.9f516d09.js.map",
     "787.ff093841.chunk.js.map": "/ds4a-icfes/static/js/787.ff093841.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a4f7b9e.css",
-    "static/js/main.64b6d985.js"
+    "static/js/main.9f516d09.js"
   ]
 }
