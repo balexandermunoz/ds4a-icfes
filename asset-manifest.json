@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ds4a-icfes/static/css/main.2a4f7b9e.css",
-    "main.js": "/ds4a-icfes/static/js/main.9f516d09.js",
+    "main.js": "/ds4a-icfes/static/js/main.6c2659f9.js",
     "static/js/787.ff093841.chunk.js": "/ds4a-icfes/static/js/787.ff093841.chunk.js",
     "static/media/BrayanMunoz.jpg": "/ds4a-icfes/static/media/BrayanMunoz.dd81a241ce4d80ac951c.jpg",
     "static/media/FelipeBetancur.png": "/ds4a-icfes/static/media/FelipeBetancur.8024b621c2ffee037f34.png",
@@ -18,11 +18,11 @@
     "index.html": "/ds4a-icfes/index.html",
     "static/media/scatter-plot.svg": "/ds4a-icfes/static/media/scatter-plot.74fc77dca309deed8647d01217591615.svg",
     "main.2a4f7b9e.css.map": "/ds4a-icfes/static/css/main.2a4f7b9e.css.map",
-    "main.9f516d09.js.map": "/ds4a-icfes/static/js/main.9f516d09.js.map",
+    "main.6c2659f9.js.map": "/ds4a-icfes/static/js/main.6c2659f9.js.map",
     "787.ff093841.chunk.js.map": "/ds4a-icfes/static/js/787.ff093841.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a4f7b9e.css",
-    "static/js/main.9f516d09.js"
+    "static/js/main.6c2659f9.js"
   ]
 }
