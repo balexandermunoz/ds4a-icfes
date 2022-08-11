@@ -1,16 +1,17 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from 'react';
 import { AnimatePresence } from "framer-motion";
-import useFetch from '../scripts/useFetch';
+// import useFetch from '../scripts/useFetch';
 import Home from './Home';
 import Analysis from "./Analysis";
 import Models from "./Models";
 import About from "./About";
+import colegiosData from "../assets/json/colegiosDane.json"
 
 const AnimatedRoutes = () => {
     const location = useLocation();
-    const { data: colegiosData, isLoading, isError } = useFetch('https://icfes-ds4a.xyz/MasterData/School');
-
+    // const { data: colegiosData, isLoading, isError } = useFetch('https://icfes-ds4a.xyz/MasterData/School');
+    const isLoading = false; const isError = false;
     const [dep, setDep] = useState("");
     const [mun, setMun] = useState("");
     const [col, setCol] = useState("");

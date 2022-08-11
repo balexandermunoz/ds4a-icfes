@@ -43,7 +43,6 @@ const About = () => {
         'Julian': 'https://www.linkedin.com/in/julian-garzon-transformacion-agilismo-software/?locale=en_US',
         'Orminson': 'https://www.linkedin.com/in/orminson-santos-ariza-0ba399126',
         'Jorjhan': 'https://www.linkedin.com/in/jorjhan-leal-ortiz/',
-        'Julian': null,
     }
     return (
         <motion.div className="about"
